@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYCU Domain</title>
+  <meta name="description" content="提供國立陽明交通大學（NYCU）教職員及在學學生免費申請專屬網域。完成 NYCU OAuth 身分驗證後，即可快速申請並管理 DNS 設定。">
+  <link rel="canonical" href="https://nycu.cc/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NYCU.cc">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:url" content="https://nycu.cc/">
+  <meta property="og:title" content="NYCU.cc Domain Hosting">
+  <meta property="og:description" content="提供國立陽明交通大學（NYCU）教職員及在學學生免費申請專屬網域。完成 NYCU OAuth 身分驗證後，即可快速申請並管理 DNS 設定。">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NYCU.cc Domain Hosting",
+    "url": "https://nycu.cc/",
+    "inLanguage": "zh-TW",
+    "description": "提供國立陽明交通大學（NYCU）教職員及在學學生免費申請專屬網域。完成 NYCU OAuth 身分驗證後，即可快速申請並管理 DNS 設定。",
+    "publisher": {
+      "@type": "Organization",
+      "name": "NYCU.cc Domain Hosting",
+      "url": "https://nycu.cc/"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="/css/style.css?v=20260316">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦊</text></svg>">
+  <script src="/js/analytics.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="#" data-page="home" class="nav-brand">
+          <span class="logo">🦊</span>
+          <span class="brand-name">NYCU.cc Domain Hosting</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="選單" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <div class="nav-links">
+            <a href="#" data-page="home" class="nav-link">首頁</a>
+            <a href="#" data-page="dashboard" class="nav-link" id="nav-dashboard" style="display:none;">網域管理</a>
+            <a href="#" data-page="register-info" class="nav-link">註冊說明</a>
+            <a href="#" data-page="qa" class="nav-link">Q&amp;A</a>
+          </div>
+          <div class="nav-actions">
+            <span id="user-greeting" style="display:none;"></span>
+            <button id="btn-login" class="btn btn-light btn-sm">登入</button>
+            <button id="btn-logout" class="btn btn-outline-light btn-sm" style="display:none;">登出</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Page -->
+    <main class="container" id="pages-container">
+      <section id="page-home" class="page active">
+        <div class="hero">
+          <h1>創建屬於你的 NYCU.cc 網域</h1>
+          <p class="hero-subtitle">陽明交大教職員及在學學生皆能免費申請，完成 NYCU OAuth 身分驗證即可開始。</p>
+          <div class="domain-preview">
+            <span class="preview-text">
+              <span id="preview-name" class="highlight">yourname</span>.<span id="main-domain">nycu.cc</span>
+            </span>
+          </div>
+          <div class="check-domain">
+            <div class="input-group">
+              <input type="text" id="check-subdomain" placeholder="輸入想要的網域名稱" maxlength="63" autocomplete="off">
+              <span class="input-suffix" id="domain-suffix">.nycu.cc</span>
+              <button id="btn-check" class="btn btn-primary">檢查可用性</button>
+            </div>
+            <p id="check-result" class="check-result"></p>
+          </div>
+        </div>
+        <section class="features-section" aria-labelledby="features-title">
+          <h2 id="features-title" class="visually-hidden">服務特色</h2>
+          <div class="features">
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>更新超快</h3>
+              <p>本服務使用 Cloudflare DNS<br>幾乎即時生效！</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💵</div>
+              <h3>永遠免費</h3>
+              <p>本服務不以營利為目的<br>永不收費！</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">👍</div>
+              <h3>免費協助</h3>
+              <p>若對 DNS 服務不熟悉<br>請儘管來問我們！</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#" data-page="contact" class="footer-link">聯絡我們</a>
+      <span class="footer-sep">·</span>
+      <a href="/privacy" class="footer-link">隱私權政策</a>
+      <span class="footer-sep">·</span>
+      <a href="/terms" class="footer-link">服務條款</a>
+      <span class="footer-sep">·</span>
+      <a href="https://www.cloudflarestatus.com/" target="_blank" rel="noopener" class="footer-link">Cloudflare Status ↗</a>
+    </div>
+    <p class="footer-copy">nycu.cc &copy; 2026</p>
+  </footer>
+  
+  <script src="/js/app.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4b6545e060824c3685cd9c283cf00b7f","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
